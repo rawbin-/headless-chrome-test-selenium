@@ -1,0 +1,29 @@
+{
+  "name": "headless-chrome-test-selenium",
+  "version": "0.1.0",
+  "description": "headless chrome test for selenium",
+  "main": "index.js",
+  "dependencies": {
+    "chromedriver": "^2.30.1",
+    "selenium-webdriver": "^3.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rawbin-/headless-chrome-test-selenium.git"
+  },
+  "keywords": [
+    "headless",
+    "chrome",
+    "selenium"
+  ],
+  "author": "rawbin-",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rawbin-/headless-chrome-test-selenium/issues"
+  },
+  "homepage": "https://github.com/rawbin-/headless-chrome-test-selenium#readme"
+}
