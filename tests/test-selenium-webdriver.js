@@ -15,13 +15,17 @@
 
 
 // require('chromedriver')
+
+const chromeDriver = require('selenium-webdriver/chrome');
+
 const webdriver = require('selenium-webdriver'),
     By = webdriver.By;
 
+
 const driver = new webdriver.Builder()
     .forBrowser('chrome')
+    .setChromeOptions(new chromeDriver.Options().addArguments(['headless']))
     .build();
-
 
 driver.get('https://www.baidu.com').then((args) => {
     // 获取百度搜索按钮的 文本

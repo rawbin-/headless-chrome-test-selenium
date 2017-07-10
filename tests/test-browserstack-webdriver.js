@@ -13,20 +13,23 @@
  * --------------------------------------------------------------------------- *
  */
 
+const chromeDriver = require('selenium-webdriver/chrome');
+
 const webdriver = require('browserstack-webdriver'),
     By = webdriver.By;
 
 // Input capabilities
 const capabilities = {
-    'browserName' : 'firefox',
+    'browserName' : 'chrome',
     'browserstack.user' : BROWSERSTACK_USERNAME,
     'browserstack.key' : BROWSERSTACK_KEY
 }
 
-const driver = new webdriver.Builder().
-usingServer('http://hub.browserstack.com/wd/hub').
-withCapabilities(capabilities).
-build();
+const driver = new webdriver.Builder()
+    .usingServer('http://hub.browserstack.com/wd/hub')
+    .setChromeOptions(new chromeDriver.Options().addArguments(['headless']))
+    .withCapabilities(capabilities)
+    .build();
 
 
 driver.get('https://www.baidu.com').then((args) => {
